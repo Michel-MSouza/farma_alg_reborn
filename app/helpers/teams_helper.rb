@@ -50,7 +50,7 @@ module TeamsHelper
 
   # Verify if the anonymous id or the user name should be displaied.
   def name_to_display(user, team)
-    return user.name if current_user.owner?(team) || current_user == user
+    return user.name if current_user.owner?(team) || current_user == user || team.name == "2018/2-B"
     user.anonymous_id
   end
 
